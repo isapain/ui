@@ -875,12 +875,12 @@ local Excusyz = Instance.new("ScreenGui")
 
 Excusyz.Name = "Excusyz"
 Excusyz.IgnoreGuiInset = true
-Excusyz.Parent = game.Players.LocalPlayer.PlayerGui
+Excusyz.Parent = game.CoreGui
 
 function Library:CreateWindow(info)
 	
 	local NameHub = info.Name or info.name or info.Title or info.title or "Excusyz"
-	local Icon = info.Icon or info.icon or 122610081600422
+	local Icon = info.Icon or info.icon
 	
 	local Background_1 = Instance.new("Frame")
 	local UICorner_1 = Instance.new("UICorner")
@@ -943,7 +943,7 @@ function Library:CreateWindow(info)
 	Day_1.BackgroundTransparency = 1
 	Day_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Day_1.BorderSizePixel = 0
-	Day_1.Position = UDim2.new(0.248750001, 0,0.12, 0)
+	Day_1.Position = UDim2.new(0.248750001, 0,0.0944999978, 0)
 	Day_1.Size = UDim2.new(0, 63,0, 30)
 	Day_1.FontFace = Font.new("rbxassetid://16658237174", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
 	Day_1.Text = os.date("%A, %B %d, %Y")
@@ -958,7 +958,7 @@ function Library:CreateWindow(info)
 	Line_1.BackgroundTransparency = 0.5
 	Line_1.BorderColor3 = Color3.fromRGB(0,0,0)
 	Line_1.BorderSizePixel = 0
-	Line_1.Position = UDim2.new(0, 0,0.16, 0)
+	Line_1.Position = UDim2.new(0, 0,0.145999998, 0)
 	Line_1.Size = UDim2.new(1, 0,0, 2)
 
 	local CloseUI = Instance.new("TextButton")
@@ -1069,7 +1069,7 @@ function Library:CreateWindow(info)
 			t = 0.3,
 			s = "Linear",
 			d = "Out",
-			g = {Size = UDim2.new(0, 400,0, 300)}
+			g = {Size = UDim2.new(0, 400,0, 500)}
 		}):Play()
 	end)
 	
@@ -1121,7 +1121,7 @@ function Library:CreateWindow(info)
 				t = 0.15,
 				s = "Linear",
 				d = "Out",
-				g = {Size = UDim2.new(0, 400,0, 300)}
+				g = {Size = UDim2.new(0, 400,0, 500)}
 			}):Play()
 			Tw({
 				v = CloseUI,
@@ -1337,7 +1337,7 @@ function Library:CreateWindow(info)
 		Page_1.BorderColor3 = Color3.fromRGB(0,0,0)
 		Page_1.BorderSizePixel = 0
 		Page_1.Position = UDim2.new(-2, 0,0.569999993, 0)
-		Page_1.Size = UDim2.new(0.949999988, 0,0, 225)
+		Page_1.Size = UDim2.new(0.949999988, 0,0, 400)
 		Page_1.Visible = false
 
 		UIListLayout_6.Parent = Page_1
@@ -2570,38 +2570,37 @@ function Library:CreateWindow(info)
 				local Value = info.Value or info.Defuse or info.value or info.defuse or info.vu or info.df or nil
 				local Callback = info.Callback or info.callback or info.cb or function() end
 				
-				local TextBox = Instance.new("Frame")
+				local TextBox_2 = Instance.new("Frame")
 				local TextBoxBar_1 = Instance.new("Frame")
-				local UICorner_1 = Instance.new("UICorner")
-				local UIStroke_1 = Instance.new("UIStroke")
+				local UICorner_17 = Instance.new("UICorner")
+				local UIStroke_6 = Instance.new("UIStroke")
 				local TextBoxValue_1 = Instance.new("TextBox")
-				local Title_1 = Instance.new("TextLabel")
 				
-				TextBox.Name = "TextBox"
-				TextBox.Parent = Section_1
-				TextBox.BackgroundColor3 = Color3.fromRGB(255,255,255)
-				TextBox.BackgroundTransparency = 1
-				TextBox.BorderColor3 = Color3.fromRGB(0,0,0)
-				TextBox.BorderSizePixel = 0
-				TextBox.LayoutOrder = 2
-				TextBox.Size = UDim2.new(1, 0,0, 45)
+				TextBox_2.Name = "TextBox"
+				TextBox_2.Parent = Section_1
+				TextBox_2.BackgroundColor3 = Color3.fromRGB(255,255,255)
+				TextBox_2.BackgroundTransparency = 1
+				TextBox_2.BorderColor3 = Color3.fromRGB(0,0,0)
+				TextBox_2.BorderSizePixel = 0
+				TextBox_2.LayoutOrder = 2
+				TextBox_2.Size = UDim2.new(1, 0,0, 35)
 
 				TextBoxBar_1.Name = "TextBoxBar"
-				TextBoxBar_1.Parent = TextBox
+				TextBoxBar_1.Parent = TextBox_2
 				TextBoxBar_1.AnchorPoint = Vector2.new(0.5, 0.5)
 				TextBoxBar_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
 				TextBoxBar_1.BackgroundTransparency = 1
 				TextBoxBar_1.BorderColor3 = Color3.fromRGB(0,0,0)
 				TextBoxBar_1.BorderSizePixel = 0
-				TextBoxBar_1.Position = UDim2.new(0.5, 0,0.699999988, 0)
+				TextBoxBar_1.Position = UDim2.new(0.5, 0,0.5, 0)
 				TextBoxBar_1.Size = UDim2.new(0.899999976, 0,0, 20)
 
-				UICorner_1.Parent = TextBoxBar_1
-				UICorner_1.CornerRadius = UDim.new(0,4)
+				UICorner_17.Parent = TextBoxBar_1
+				UICorner_17.CornerRadius = UDim.new(0,4)
 
-				UIStroke_1.Parent = TextBoxBar_1
-				UIStroke_1.Color = Color3.fromRGB(37,37,37)
-				UIStroke_1.Thickness = 1
+				UIStroke_6.Parent = TextBoxBar_1
+				UIStroke_6.Color = Color3.fromRGB(37,37,37)
+				UIStroke_6.Thickness = 1
 
 				TextBoxValue_1.Name = "TextBoxValue"
 				TextBoxValue_1.Parent = TextBoxBar_1
@@ -2614,26 +2613,11 @@ function Library:CreateWindow(info)
 				TextBoxValue_1.Position = UDim2.new(0.5, 0,0.5, 0)
 				TextBoxValue_1.Size = UDim2.new(0.899999976, 0,1, 0)
 				TextBoxValue_1.Font = Enum.Font.Gotham
-				TextBoxValue_1.PlaceholderColor3 = Color3.fromRGB(145, 145, 145)
+				TextBoxValue_1.PlaceholderColor3 = Color3.fromRGB(178,178,178)
 				TextBoxValue_1.PlaceholderText = Placeholder
-				TextBoxValue_1.Text = Value
+				TextBoxValue_1.Text = Title
 				TextBoxValue_1.TextColor3 = Color3.fromRGB(255,255,255)
 				TextBoxValue_1.TextSize = 9
-
-				Title_1.Name = "Title"
-				Title_1.Parent = TextBox
-				Title_1.AnchorPoint = Vector2.new(0.5, 0.5)
-				Title_1.BackgroundColor3 = Color3.fromRGB(255,255,255)
-				Title_1.BackgroundTransparency = 1
-				Title_1.BorderColor3 = Color3.fromRGB(0,0,0)
-				Title_1.BorderSizePixel = 0
-				Title_1.Position = UDim2.new(0.5, 0,0.25, 0)
-				Title_1.Size = UDim2.new(0.899999976, 0,0, 20)
-				Title_1.Font = Enum.Font.GothamBold
-				Title_1.Text = Title
-				Title_1.TextColor3 = Color3.fromRGB(255,255,255)
-				Title_1.TextSize = 9
-				Title_1.TextXAlignment = Enum.TextXAlignment.Left
 				
 				TextBoxValue_1.FocusLost:Connect(function()
 					if Value then
@@ -3136,3 +3120,185 @@ function Library:CreateWindow(info)
 
 	return Library.Tab
 end
+
+local Window = Library:CreateWindow({
+	Title = "Excusyz Hub",
+	Icon = 87567481752287
+})
+
+local Tab1 = Window:CreateTab({
+	Title = "General Tab",
+	Icon = "home"
+})
+
+local Section1 = Tab1:CreateSection({
+	Title = "Section",
+	Side = "Left"
+})
+
+local Section2 = Tab1:CreateSection({
+	Title = "Section",
+	Side = "Right"
+})
+
+Section1:CreateToggle({
+	Title = "Toggle",
+	Value = false,
+	Callback = function(value)
+		print(value)
+end})
+Section1:CreateToggle({
+	Title = "Toggle",
+	Value = true,
+	Callback = function(value)
+		print(value)
+end})
+
+Section1:CreateSlider({
+	Title = "Slider",
+	TextEnding = " %",
+	Min = 1,
+	Max = 100,
+	Value = 80,
+	Callback = function(value)
+		print(value)
+end})
+
+Section1:CreateDropdown({
+	Title = "Dropdown",
+	List = {"Select 1", "Select 2", "Select 3"},
+	Multi = false,
+	Value = "Select 1",
+	Callback = function(value)
+		print(value)
+end})
+
+Section1:CreateDropdown({
+	Title = "Multi Dropdown",
+	List = {"Select 1", "Select 2", "Select 3"},
+	Multi = true,
+	Value = {"Select 2"},
+	Callback = function(value)
+		print(value)
+end})
+
+Section1:CreateButton({
+	Title = "Button",
+	Callback = function()
+		print("Button")
+end})
+
+Section2:CreateKeyBind({
+	Title = "KeyBind",
+	Value = Enum.KeyCode.Q,
+	Callback = function(value)
+		print(value)
+end})
+
+Section2:CreateLabel({
+	Title = "This is a text label"
+})
+
+Section2:CreateTextBox({
+	Title = "TextBox",
+	Placeholder = "Place Your Text",
+	Value = "This is a Textbox",
+	Callback = function(value)
+		print(value)
+end})
+
+Section2:CreateColorPicker({
+	Title = "Color Picker",
+	Color = Color3.fromRGB(255,255,255),
+	Callback = function(r,g,b)
+		print(r, g, b)
+end})
+
+
+local Tab1 = Window:CreateTab({
+	Title = "General",
+	Icon = "home"
+})
+
+local Section1 = Tab1:CreateSection({
+	Title = "Section",
+	Side = "Left"
+})
+
+local Section2 = Tab1:CreateSection({
+	Title = "Section",
+	Side = "Right"
+})
+
+Section1:CreateToggle({
+	Title = "Toggle",
+	Value = false,
+	Callback = function(value)
+		print(value)
+	end})
+Section1:CreateToggle({
+	Title = "Toggle",
+	Value = true,
+	Callback = function(value)
+		print(value)
+	end})
+
+Section1:CreateSlider({
+	Title = "Slider",
+	TextEnding = " %",
+	Min = 1,
+	Max = 100,
+	Value = 80,
+	Callback = function(value)
+		print(value)
+	end})
+
+Section1:CreateDropdown({
+	Title = "Dropdown",
+	List = {"Select 1", "Select 2", "Select 3"},
+	Multi = false,
+	Value = "Select 1",
+	Callback = function(value)
+		print(value)
+	end})
+
+Section1:CreateDropdown({
+	Title = "Multi Dropdown",
+	List = {"Select 1", "Select 2", "Select 3"},
+	Multi = true,
+	Value = {"Select 2"},
+	Callback = function(value)
+		print(value)
+	end})
+
+Section1:CreateButton({
+	Title = "Button",
+	Callback = function()
+		print("Button")
+	end})
+
+Section2:CreateKeyBind({
+	Title = "KeyBind",
+	Value = Enum.KeyCode.Q,
+	Callback = function(value)
+		print(value)
+	end})
+
+Section2:CreateLabel({
+	Title = "This is a text label"
+})
+
+Section2:CreateTextBox({
+	Title = "TextBox",
+	Placeholder = "Place Your Text",
+	Value = "This is a Textbox",
+	Callback = function(value)
+		print(value)
+	end})
+
+Section2:CreateColorPicker({
+	Title = "Color Picker",
+	Color = Color3.fromRGB(255,255,255),
+	Callback = function(r,g,b)
+		print(r, g, b)
+	end})
